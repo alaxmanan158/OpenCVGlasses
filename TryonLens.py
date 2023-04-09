@@ -7,7 +7,7 @@ num=1
 while True:
     k=cv2.waitKey(10)
     if k==ord('s'):
-        num = num+1
+        num=num+1
     #print(num)    
     if(num<=29):
             overlay = cv2.imread('Glasses/glass{}.png'.format(num), cv2.IMREAD_UNCHANGED)
