@@ -5,9 +5,9 @@ cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface
 num=1
 
 while True:
-    k=cv2.waitKey(10)
+    k=cv2.waitKey(1000)
     if k==ord('s'):
-        num=num+1
+        num+=1
     #print(num)    
     if(num<=29):
             overlay = cv2.imread('Glasses/glass{}.png'.format(num), cv2.IMREAD_UNCHANGED)
