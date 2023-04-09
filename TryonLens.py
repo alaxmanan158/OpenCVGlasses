@@ -1,11 +1,12 @@
 import cv2
 import cvzone
+import keyboard
 cap = cv2.VideoCapture(0)
 cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 num=1
 
 while True:
-    k=cv2.waitKey(10)
+    k=cv2.waitKey(1)
     if k==ord('s'):
         num+=1
     if(num<=29):
