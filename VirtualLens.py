@@ -16,7 +16,7 @@ while True:
     for (x, y, w, h) in faces:
         roi_gray=gray_scale[y:y+h,x:x+w]
         eyes=eye_cascade.detectMultiScale(roi_gray,1.3,5)
-        overlay_resize = cv2.resize(overlay,(w,int(h*0.7)))
+        overlay_resize = cv2.resize(overlay,(w,int(h*0.8)))
         frame = cvzone.overlayPNG(frame, overlay_resize, [x, y])
             
             
