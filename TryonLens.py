@@ -1,6 +1,9 @@
 import cv2
 import cvzone
 import keyboard
+#import _tkinter
+
+print("Welcome to VisionARy's virtual AR glasses simulator. This simulator enables users to try out various glasses in real time. Press 's' to see the next glasses in the list and 'd' to see the previous glasses in the list")
 cap = cv2.VideoCapture(0)
 cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 num=1
@@ -8,7 +11,12 @@ num=1
 while True:
     k=cv2.waitKey(1)
     if k==ord('s'):
+        if(num < 29):
+            print("End of list")
         num+=1
+    if k==ord('d'):
+        if(num > 0):
+            num-=1
     if(num<=29):
             overlay = cv2.imread('Glasses/glass{}.png'.format(num), cv2.IMREAD_UNCHANGED)
          
