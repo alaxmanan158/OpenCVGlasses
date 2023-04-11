@@ -20,7 +20,7 @@ while True:
         frame = cvzone.overlayPNG(frame, overlay_resize, [x, y])
             
             
-    cv2.imshow('SnapLens', frame)
+    cv2.imshow('SnapVir', frame)
     if cv2.waitKey(10) == ord('q') or num>29:
         break   
 cap.release()
